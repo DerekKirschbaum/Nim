@@ -8,27 +8,8 @@ export default function App () {
           The winner is the player that crosses off the last line.</p>
       </div>
       <div className="gamebox">
-        <Line />
-        <div>
-            <button>
-                <img className="tallys" 
-                    src={require('./images/BlueCrossedLine.png')} 
-                    alt="Blue Crossed Line">
-                </img>
-            </button>
-            <button>
-                <img className="tallys" 
-                    src={require('./images/RedCrossedLine.png')} 
-                    alt="Red Crossed Line">
-                </img>
-            </button>
-            <button>
-                <img className="tallys" 
-                    src={require('./images/BlackLine.png')} 
-                    alt="Black Line">
-                </img>
-            </button>
-        </div>
+        <h1>Test</h1>
+        
       </div>
       
 
