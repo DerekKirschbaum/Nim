@@ -8,7 +8,7 @@ export default function App () {
           The winner is the player that crosses off the last line.</p>
       </div>
       <div className="gamebox">
-        <button><img className="tallys" src={require('./pngtallys.png')} alt="tally marks"></img></button>
+        <Line />
       </div>
       
 
