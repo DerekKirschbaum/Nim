@@ -1,4 +1,38 @@
+import React from "react"
+import Line from "./Line.js"
+
 export default function App () {
+
+  const [lines, setLines] = React.useState(newGame())
+  console.log(lines)
+
+  function newLineObject(id) {
+    return {
+      key: id,
+      value: id,
+      isCrossed: false,
+      redPlayer: true
+    }
+  }
+
+  function newGame() {
+    const newLines = []
+    for(let i = 1; i<16; i++) {
+      newLines.push(newLineObject(i))
+    }
+    
+  }
+
+  const lineElements = lines.map(line => (
+    <Line 
+      key={line.key}
+      value={line.value}
+      isCrossed={line.isCrossed}
+      redPlayer={line.redPlayer} 
+    />
+  ))
+  
+
   return (
     <div className="App">
       <div className="info">
@@ -8,10 +42,8 @@ export default function App () {
           The winner is the player that crosses off the last line.</p>
       </div>
       <div className="gamebox">
-        <h1>Test</h1>
         
       </div>
-      <div><h1>Test again</h1></div>
       
 
     </div>

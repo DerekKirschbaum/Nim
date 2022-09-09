@@ -1,24 +1,17 @@
+import React from "react"
 
 export default function Line(props) {
     return (
-        <div>
+        <div className="line">
             <button>
-                <img className="tallys" 
-                    src={require('./images/BlueCrossedLine.png')} 
+                {props.isCrossed && <img className="tallys" 
+                    src={require('./images/BlueCrossedLine.png') }
                     alt="Blue Crossed Line">
-                </img>
-            </button>
-            <button>
-                <img className="tallys" 
-                    src={require('./images/RedCrossedLine.png')} 
-                    alt="Red Crossed Line">
-                </img>
-            </button>
-            <button>
-                <img className="tallys" 
-                    src={require('./images/BlackLine.png')} 
+                </img>}
+                {!props.isCrossed && <img className="tallys" 
+                    src={require('./images/BlackLine.png') }
                     alt="Black Line">
-                </img>
+                </img>}
             </button>
         </div>
     )
